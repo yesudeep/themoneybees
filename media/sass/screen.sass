@@ -11,3 +11,11 @@
     +box-shadow(!hover_shadow)
     +transform("scale(" !scale ")")
     :z-index 5
+
+    
+#footer
+    :background-color= !color_bg_footer
+    #footer-content
+        :background-color= !color_bg_footer !image_bg_footer "no-repeat scroll 0 0"
+        +grid-container(12)
+        
