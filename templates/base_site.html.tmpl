@@ -1,0 +1,45 @@
+<!doctype html><html {% block html_attributes %}{% endblock %}><head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta charset="utf-8" />
+<title>{% block tag_title %}{{ APPLICATION_TITLE }}{% endblock %}</title>
+
+{% block unsupported_browser %}
+#*<!--[if IE]>
+<script type="text/javascript">
+window.location.href="/unsupported/browser/";
+</script>
+<![endif]-->*#
+{% endblock %}
+
+<!--[if gt IE 6]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+{% block tag_head %}{% endblock %}
+</head><body {% block body_attributes %}{% endblock %}>
+{% block chrome_frame_plugin %}
+<!--[if lt IE 7]>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+<div id="chrome_frame_plugin_placeholder"></div>
+<script type="text/javascript">CFInstall.check({node:"chrome_frame_plugin_placeholder"});</script>
+<![endif]-->
+{% endblock %}
+{% block tag_body %}{% endblock %}
+
+{% block tag_scripts_prefix %}
+<script type="text/javascript">
+$LOADER_SCRIPT
+window.scripts=["{{ JQUERY_URL }}"];
+</script>
+{% endblock %}
+{% block tag_scripts_base %}{% endblock %}
+{% block tag_scripts %}{% endblock %}
+{% block tag_scripts_suffix %}
+<script type="text/javascript">
+getScripts(window.scripts);
+</script>
+{% endblock %}
+{% block tag_scripts_final %}{% endblock %}
+{% block tag_scripts_analytics %}{{ ANALYTICS_CODE }}{% endblock %}
+</body></html>
+
