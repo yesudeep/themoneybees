@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body_attributes %}id="page-landing"{% endblock %}
+
+{% block tag_trunk_content %}
+
+{% endblock %}
+
+{% block tag_scripts %}
+<script type="text/javascript">
+  window.scripts.push("{{ TEXT_MEDIA_URL }}script/page/index{{ JS_MINIFIED }}.js");
+</script>
+{% endblock %}

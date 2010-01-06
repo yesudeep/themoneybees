@@ -61,16 +61,16 @@ for f in IMAGE_FILES:
 
 # Stitching graphics together
 
-stitched_images = [
-    """
+stitched_images = []
+'''
     dict(
         target='target.png',
         sources=Split("""
         """),
         orientation='horizontal',
         ),
-    """
 ]
+'''
 
 for stitch in stitched_images:
     func = env.HStitchImages if stitch.get('orientation', 'horizontal') == 'horizontal' else env.VStitchImages

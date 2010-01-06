@@ -1,21 +1,23 @@
 @import base.sass
 
 =portrait(!rotation="-7deg", !scale="1.25", !shadow="1px 1px 8px #444", !hover_shadow="1px 1px 16px #444", !transition_duration=".35s", !transition_easing="ease")
-  :display block
-  +transform(rotate(!rotation))
-  +transition("-webkit-transform" !transition_duration !transition_easing)
-  +box-shadow(!shadow)
-  :position relative
-  :z-index 4
-  &:hover
-    +box-shadow(!hover_shadow)
-    +transform("scale(" !scale ")")
-    :z-index 5
+    :display block
+    +transform(rotate(!rotation))
+    +transition("-webkit-transform" !transition_duration !transition_easing)
+    +box-shadow(!shadow)
+    :position relative
+    :z-index 4
+    &:hover
+        +box-shadow(!hover_shadow)
+        +transform("scale(" !scale ")")
+        :z-index 5
 
     
 #footer
     :background-color= !color_bg_footer
     #footer-content
         :background-color= !color_bg_footer !image_bg_footer "no-repeat scroll 0 0"
-        +grid-container(12)
+        :min-height 250px
+        +grid-container()
+        
         
