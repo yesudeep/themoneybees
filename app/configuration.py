@@ -70,7 +70,8 @@ if SERVER_PORT and SERVER_PORT != '80':
     HOST_NAME = '%s:%s' % (SERVER_NAME, SERVER_PORT,)
     LOCAL = True
     DEBUG = True
-    MEDIA_URL = 'http://%s/s/' % (HOST_NAME, )
+    #MEDIA_URL = 'http://%s/s/' % (HOST_NAME, )
+    MEDIA_URL = "/s/"
     TEXT_MEDIA_URL = MEDIA_URL
 else:
     # We are using the production server.
@@ -83,8 +84,8 @@ else:
 
 if DEBUG:
     # Minification suffixes to use for CSS and JS files.
-    CSS_MINIFIED = ''
-    JS_MINIFIED = ''
+    CSS_MINIFIED = '-min'
+    JS_MINIFIED = '-min'
 else:
     CSS_MINIFIED = '-min'
     JS_MINIFIED = '-min'

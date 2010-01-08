@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body_attributes %}id="page-blog"{% endblock %}
+
+{% block tag_trunk_content %}
+<!-- h1>5 &Uuml;ber Tax-Saving Tricks &amp; Tips to Maximize Returns</h1-->
+<h1>5 Steuer sparende Tipps & Tricks</h1>
+<blockquote class="dateline"><span class="ampersand">~</span> Friday, January 8, 2010 <span class="ampersand">~</span></blockquote>
+<blockquote class="authorline">by <strong>Saurabh Maheshwari</strong>&mdash;<strong>Hamburg, Germany</strong></blockquote>
+
+<div class="article">
+    <blockquote class="intro">Your chances of success are directly proportional to the degree of pleasure you derive from what you do.</blockquote>
+    <div class="aside">
+        <h2>Economic Times Edition</h2>
+        <p>The article has appeared in the Economic Times.</p>
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    </div>
+    <div class="content columns">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+        <h2>Veto.</h2>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>At the very common 1024x768 screen resolution, most fixed-layout websites don't use all available space to the left and right of their content. Flexible layouts make a better use of horizontal space, but struggle to maintain usable line-lengths. Usability experts have told us that there are just so many words you should put on a line. Between 8 and 12 words seems to be the ideal line length. Print media, especially newspapers, don't hesitate to use even shorter lines. Why? Because they can, by laying out text across several columns.</p>
+        <p>As a web designer, you can arrange a text so it flows into <em></em>several well-balanced columns. Or at least you can try. But as you know, the web is not a medium that provides you absolute control over the final display of information. Your nicely crafted <em>markup may turn out badly</em> if your visitors, for instance, use a different font size or turn images off. Similarly, when you switch from static HTML pages to database-driven content, you lose whatever small ability you had to structure your text. Your markup, accordingly, needs to accommodate content of unknown size.</p>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block tag_scripts %}
+<script type="text/javascript">
+  window.scripts.push("{{ TEXT_MEDIA_URL }}script/page/blog{{ JS_MINIFIED }}.js");
+</script>
+{% endblock %}

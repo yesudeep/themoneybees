@@ -14,13 +14,187 @@
 
 html, body
     height: 100%
+    :background-color= !color_bg_footer
+    :font= "1em/1.5" !font_family_serif
+    :color= !color_body_text
+    :line-height 1.5
+a
+    :text-decoration none
+em
+    :font-style italic
+span.ampersand
+    :font-family= !font_family_ampersand
+    :font-size 110%
+    :font-style italic
+    :font-weight normal
+
+=heading-level-2()
+    :font-family= !font_stack_copperplate
+    :color= !color_h2
+    :font-size 1.4em
+    :text-shadow= "1px 1px 1px" !color_h2_text_shadow
+    strong
+        :color= !color_body_text
+    
+
+#trunk
+    :border-top= "1px solid" !color_border_top_trunk
+    :border-bottom= "1px solid" !color_border_bottom_trunk
+    :background= !color_bg_trunk !image_bg_trunk "repeat scroll 0 0"
+    :overflow hidden
+     
+#trunk-ads
+    +grid-container()
+    :background= "transparent" !image_bg_trunk_content "no-repeat 50% 0%"
+    :padding-top 1em
+    h2
+        +heading-level-2
+        :text-align center   
+#trunk-content
+    +grid-container()
+    :padding-top 4em
+    :padding-bottom 4em
+    strong
+        :color= !color_body_strong
+    h1
+        :font-family= !font_stack_helvetica_black
+        :color= !color_h1
+        :font-size 6.0em
+        :font-weight bold
+        :line-height 0.9
+        :letter-spacing -0.07em
+        :text-align center
+        :text-shadow 2px 2px 2px #fff
+        :width 650px
+        :margin 0.4em auto
+    p
+        :margin-bottom 1em
+    h2, .dateline
+        +heading-level-2
+    .dateline
+        :text-align center
+    blockquote.intro, p.intro
+        :font-family= !font_stack_garamond
+        :text-align center
+        :font-style italic
+        :font-size 1.2em
+        :width 550px
+        :margin 1em auto 2em
+        :color= !color_body_strong
+        :text-shadow 1px 1px 1px #fff
+    blockquote.authorline, p.authorline
+        :font-family= !font_family_serif
+        :font-style italic
+        :text-align center
+        :text-shadow 1px 1px 1px #fff
+        :margin-bottom 1em
+        strong
+            :font-style normal
+            :font-family= !font_stack_copperplate
+            :font-size 1.1em
+    //blockquote.dateline, p.dateline
+        :font-family= !font_family_serif
+        :text-align center
+        :margin-bottom 1em
+        :color= !color_dateline
+        
+        
+#header
+    :background= !color_bg_splash !image_bg_splash "no-repeat 50% 0"
+    #nav
+        :background= "transparent" !image_bg_bottom_shadow "repeat-x 0 0"
+        :background-color= !color_bg_nav
+        :background-color= !color_bg_nav_rgba
+        :border-bottom= "1px solid" !color_border_bottom_nav
+        :border-bottom= "1px solid" !color_border_bottom_nav_rgba
+        #nav-content
+            :min-height 40px
+            +grid-container()
+            :padding-top 10px
+            ul.links
+                :text-align right
+                li
+                    +display-inline-block()
+                    :margin-left 1.6em
+                    a
+                        :display block
+                        :color= !color_nav_links
+                        :font-family= !font_stack_copperplate
+                        //:font-weight bold
+                        //:font-size 1em
+                        :text-transform uppercase
+                        :letter-spacing 0.2em
+                        :word-spacing 0.2em
+                        :text-shadow 1px 1px 1px #222
+                        &:hover
+                            //:border-bottom= "4px solid" !color_nav_links_hover
+                            :color= !color_nav_links_hover
+    #splash
+        :min-height 200px
+        :margin-bottom -10px
+        #splash-content
+            +grid-container()
+#trunk-top-shadow
+    :background= "transparent" !image_bg_top_shadow "repeat-x 0 0"
+    :height 8px
+    //:margin -12px
+
+#page-blog
+    .article
+        :background= "transparent" !image_bg_trunk_content "no-repeat 50% 0"
+
+#trunk-content    
+    .article.reversed
+        > .aside
+            +grid(5, 12)
+            +omega
+            :text-align left
+        > .content
+            +grid(7, 12)
+            +alpha
+    
+    .article
+        :overflow hidden
+        > .aside
+            +grid(4, 12)
+            +alpha
+            :text-align right
+            > p, ul li
+                :font-size 0.8em
+                :color= !color_aside_body_text
+                :font-family= !font_family_sans_serif
+            > h2
+                :font-family= !font_family_sans_serif_medium
+                :font-size 1em
+                :text-align right
+                :color= !color_body_text
+        > .content
+            +grid(8, 12)
+            +omega
+    
+        > .content.columns
+            +column-count(2)
+
+            
+#image-folder
+    :position absolute
+    :margin-top -240px
+    :height 450px
+    :width 450px
 
 #footer
     :background-color= !color_bg_footer
     :color= !color_fg_footer
+    :border-top= "1px solid" !color_border_top_footer
     #footer-content
-        :background-color= !color_bg_footer !image_bg_footer "no-repeat scroll 0 0"
+        :background= !color_bg_footer !image_bg_footer "no-repeat 50% 0%"
         :min-height 150px
         +grid-container()
-        
-        
+        :padding-top 20px
+        > h2
+            :text-align center
+            :font-family= !font_stack_copperplate
+            :text-transform uppercase
+            :letter-spacing 0.1em
+            :word-spacing 0.2em
+            :color= !color_fg_footer_heading

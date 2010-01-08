@@ -61,11 +61,34 @@ class IndexHandler(webapp.RequestHandler):
         response = render_cached_template('index.html')
         self.response.out.write(response)
 
+class BlogHandler(webapp.RequestHandler):
+    def get(self):
+        response = render_cached_template('blog.html')
+        self.response.out.write(response)
+
+class ContactHandler(webapp.RequestHandler):
+    def get(self):
+        response = render_cached_template('contact.html')
+        self.response.out.write(response)
+
+class OffersHandler(webapp.RequestHandler):
+    def get(self):
+        response = render_cached_template('offers.html')
+        self.response.out.write(response)
+
+class AnswersHandler(webapp.RequestHandler):
+    def get(self):
+        response = render_cached_template('answers.html')
+        self.response.out.write(response)
 
 # URL-to-request-handler mappings.
 urls = (
     # Pages.
     ('/', IndexHandler),
+    ('/blog/?', BlogHandler),
+    ('/contact/?', ContactHandler),
+    ('/answers/?', AnswersHandler),
+    ('/offers/?', OffersHandler),
 
     # Search and indexing.
     (INDEXING_URL, search.SearchIndexing),

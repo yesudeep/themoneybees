@@ -1,7 +1,7 @@
 /* Clean form implementation.
 
-!image_default_text_field_background = image_url("bg/textfield_normal.png")
-!image_default_text_field_readonly_background = image_url("bg/textfield_readonly.png")
+!image_bg_text_field = image_url("bg/textfield_normal.png")
+!image_bg_text_field_readonly = image_url("bg/textfield_readonly.png")
 
 !color_default_field_background = #fff
 !font_default_form = "1em/1.5" "Lucida Grande","HelveticaNeue-Light","HelveticaNeue","Helvetica","Arial","FreeSans","sans-serif"
@@ -53,7 +53,7 @@
   textarea
     :border 1px solid #ddd
     :border-top 1px solid #a4a4a4
-    :background= !color_default_field_background !image_default_text_field_background "repeat-x scroll 0 0"
+    :background= !color_default_field_background !image_bg_text_field "repeat-x scroll 0 0"
     :padding 6px
     :font= !font
     &:hover
@@ -69,7 +69,7 @@
     :background-color #e5e5e5
   input[readonly="readonly"],
   textarea[readonly="readonly"]
-    :background "#efefef" !image_default_text_field_readonly_background "repeat-x scroll 0 0"
+    :background= "#efefef" !image_bg_text_field_readonly "repeat-x scroll 0 0"
     :color silver
   option
     :min-width 40px

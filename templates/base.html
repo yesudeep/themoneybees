@@ -13,27 +13,58 @@
   {% block tag_wrapper_content %}
   {% block tag_header %}
 <div id="header">
-  {% block tag_header_content %}
-  <div id="header-content">
+  {% block tag_nav %}
+  <div id="nav">
+    <div id="nav-content">
+        {% block tag_nav_content %}
+        <ul class="links">
+            <li><a href="/">home</a></li>        
+            <li><a href="/blog">blog</a></li>
+            <li><a href="/answers">answers</a></li>
+            <li><a href="/offers">offers</a></li>
+            <li><a href="/contact">contact</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+  </div>
+  {% endblock %}
+  {% block tag_splash %}
+  <div id="splash">
+    <div id="splash-content">
+        {% block tag_splash_content %}
+        
+        {% endblock %}
+    </div>
   </div>
   {% endblock %}
   {% block tag_header_additional_content %}
   {% endblock %}
 </div>
 {% endblock %}
+<div id="trunk-top-shadow"></div>
 {% block tag_trunk %}
 <div id="trunk">
-  {% block tag_trunk_content %}
   <div id="trunk-content">
+  {% block tag_trunk_content %}
   
-  </div>
   {% endblock %}
+  </div>
+  <div id="trunk-ads">
+  <h2 class="advertisements">advertisements</h2>
+  {% block tag_trunk_ads %}
+  
+  <ul>
+    <li>Some ad.</li>
+  </ul>
+  {% endblock %}
+  </div>
 </div>
 {% endblock %}
 {% block tag_footer %}
 <div id="footer">
   {% block tag_footer_content %}
   <div id="footer-content">
+    <h2>the money bees</h2>
     <p>Copyright &copy; {{ COPYRIGHT_YEARS }} <a href="{{ OWNER_URL }}">{{ OWNER_COMPANY }}</a>.  All rights reserved.</p>
   </div>
   {% endblock %}
