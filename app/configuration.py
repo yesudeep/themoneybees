@@ -35,6 +35,7 @@ EXTRA_LIB_PATH = [
     path_join(DIR_PATH, 'gaeutilities'),
     path_join(DIR_PATH, 'jinja2'),
     path_join(DIR_PATH, 'pyporter2'),
+    path_join(DIR_PATH, 'aeoid'),
 ]
 sys.path = EXTRA_LIB_PATH + sys.path
 
