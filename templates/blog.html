@@ -2,8 +2,38 @@
 
 {% block body_attributes %}id="page-blog"{% endblock %}
 
+
 {% block tag_trunk_content %}
-<!-- h1>5 &Uuml;ber Tax-Saving Tricks &amp; Tips to Maximize Returns</h1-->
+<ul id="chronographs">
+    <li class="years">
+	    <a class="head" href="#year">year</a>
+	    <ul class="chronograph year">
+	        {% for year in range(2007, 2011) %}
+	        <li><a href="#year-{{ year }}">{{ year }}</a></li>
+	        {% endfor %}
+	    </ul>
+    </li>
+    <li class="months">
+        <a class="head" href="#month">month</a>
+	    <ul class="chronograph month">
+	        {#{% for month in range(1, 13) %}
+	        <li><a href=#month-{{ month }}">{{ month }}</a></li>
+	        {% endfor %}#}
+	        <li><a href="#month-1">Jan</a></li>
+	        <li><a href="#month-2">Feb</a></li>
+	        <li><a href="#month-3">Mar</a></li>
+	        <li><a href="#month-4">Apr</a></li>
+	        <li><a href="#month-5">May</a></li>
+	        <li><a href="#month-6">Jun</a></li>
+	        <li><a href="#month-7">July</a></li>
+	        <li><a href="#month-8">Aug</a></li>
+	        <li><a href="#month-9">Sep</a></li>
+	        <li><a href="#month-10">Oct</a></li>
+	        <li><a href="#month-11">Nov</a></li>
+	        <li><a href="#month-12">Dec</a></li>
+	    </ul>
+	</li>
+</ul>
 <h1>5 Steuer sparende Tipps & Tricks</h1>
 <blockquote class="dateline"><span class="ampersand">~</span> Friday, January 8, 2010 <span class="ampersand">~</span></blockquote>
 <blockquote class="authorline">by <strong>Saurabh Maheshwari</strong>&mdash;<strong>Hamburg, Germany</strong></blockquote>
@@ -24,6 +54,7 @@
 
     </div>
 </div>
+
 {% endblock %}
 
 {% block tag_scripts %}

@@ -49,10 +49,73 @@ span.ampersand
     :padding-top 1em
     h2
         +heading-level-2
-        :text-align center   
+        :text-align center  
+
+#chronographs
+    :position absolute
+    :left 0
+    :margin-top -17px
+    :overflow hidden
+    li
+        ul.chronograph
+            :display none
+        a
+            :height 25px
+            :width 60px
+            :display block
+            :background-color= !color_bg_chronograph_bar_rgba
+            :text-align center
+            :color white
+            :padding-top 0.2em
+            :font-family= !font_family_sans_serif
+            &:hover
+                :background-color= !color_bg_chronograph_bar_hover_rgba
+        a.head, a.selected
+            :background-color= !color_bg_chronograph_bar_hover_rgba
+            :font-weight bold
+    li:hover
+        ul.chronograph
+            :display block
+    li.years
+        :width 600px
+        a.head
+            :float left
+        ul.chronograph
+            li
+                +display-inline-block
+    li.months
+        :width 40px      
+        :clear both
+        ul.chronograph
+
+//#chronographs
+    //:position fixed
+    //:top 150px
+    :position absolute
+    :left 0px
+    :margin-top -15px
+    ul.chronograph
+        :overflow hidden
+        li
+            a.head, a.selected
+                :background-color= !color_bg_chronograph_bar_hover_rgba
+                :font-weight bold
+            a.head
+                //:width 100px
+                :display block
+            a
+
+        li:hover
+            a
+                :display block
+    ul.chronograph.year
+        li
+            +display-inline-block  
+        
+
 #trunk-content
     +grid-container()
-    :padding-top 4em
+    :padding-top 1em
     :padding-bottom 4em
     strong
         :color= !color_body_strong
@@ -130,7 +193,7 @@ span.ampersand
                             //:border-bottom= "4px solid" !color_nav_links_hover
                             :color= !color_nav_links_hover
     #splash
-        :min-height 200px
+        :min-height 100px
         :margin-bottom -10px
         #splash-content
             +grid-container()
