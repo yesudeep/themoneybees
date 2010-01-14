@@ -30,6 +30,8 @@ IMAGE_FILES = Split("""
     image/bg/top-shadow.png
     image/bg/bottom-shadow.png
     image/icon/folder.png
+    image/logo/money_bee.png
+    image/logo/money_bee_small.png
 """)
 
 CSS_FILES = Split("""

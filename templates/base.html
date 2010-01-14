@@ -18,6 +18,7 @@
     <div id="nav-content">
         {% block tag_nav_content %}
         <ul class="links">
+            {% block home_link %}<li id="home-link"><a href="/"> <img src="{{ MEDIA_URL }}image/logo/money_bee_small.png" /></a></li>{% endblock %}
             <li><a href="/">home</a></li>        
             <li><a href="/blog">blog</a></li>
             <li><a href="/answers">answers</a></li>
@@ -53,9 +54,20 @@
   <h2 class="advertisements">advertisements</h2>
   {% block tag_trunk_ads %}
   
-  <ul>
-    <li>Some ad.</li>
-  </ul>
+  <ul id="advertisement">
+        <li>
+            <a href="#todo">Wow ad, click here</a>
+            <p>some fantastic description of the ad you are watching.</p>
+        </li>
+        <li>
+            <a href="#todo">Wow ad, click here</a>
+            <p>some fantastic description of the ad you are watching.</p>
+        </li>
+        <li>
+            <a href="#todo">Wow ad, click here</a>
+            <p>some fantastic description of the ad you are watching.</p>
+        </li>
+    </ul>
   {% endblock %}
   </div>
 </div>

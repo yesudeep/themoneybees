@@ -116,7 +116,7 @@ span.ampersand
 #trunk-content
     +grid-container()
     :padding-top 1em
-    :padding-bottom 4em
+    :padding-bottom 5em
     strong
         :color= !color_body_strong
     h1
@@ -197,6 +197,31 @@ span.ampersand
         :margin-bottom -10px
         #splash-content
             +grid-container()
+            :padding-top 10px
+            #money-bee
+                :float left
+            h1
+                :font-family= !font_stack_helvetica_black
+                :color #fff
+                :font-size 2.0em
+                :font-weight bold
+                :line-height 0.9
+                :letter-spacing -0.07em
+                :text-shadow 2px 2px 2px #555
+                :padding-top 1em
+                span
+                    :display block
+                    :font-size 3em          
+#page-landing
+    #header
+        #splash
+            :min-height 250px
+
+#home-link
+    :position absolute
+    //:bottom -25px
+    :left 192px
+
 #trunk-top-shadow
     :background= "transparent" !image_bg_top_shadow "repeat-x 0 0"
     :height 8px
@@ -241,9 +266,23 @@ span.ampersand
             
 #image-folder
     :position absolute
-    :margin-top -240px
-    :height 450px
-    :width 450px
+    :margin-top -90px
+    //:height 450px
+    :width 300px
+
+#advertisement
+    li
+        +display-inline-block
+        :width 30%
+        :padding 10px
+        :font-family= !font_family_sans_serif
+        :font-size 0.8em
+        a
+            :color= !color_nav_links_hover
+            :border-bottom 1px dotted
+        a:hover
+            :color #CD8500
+
 
 #footer
     :background-color= !color_bg_footer
@@ -261,3 +300,11 @@ span.ampersand
             :letter-spacing 0.1em
             :word-spacing 0.2em
             :color= !color_fg_footer_heading
+        p   
+            :font-family= !font_family_sans_serif
+            :font-size 0.8em
+            :color= !color_fg_footer_heading
+        a
+            :color= !color_nav_links_hover
+        a:hover
+            :text-decoration underline
