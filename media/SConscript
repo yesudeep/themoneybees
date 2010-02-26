@@ -29,6 +29,8 @@ IMAGE_FILES = Split("""
     image/bg/splash.jpg
     image/bg/top-shadow.png
     image/bg/bottom-shadow.png
+    image/bg/selling_point_bg.jpg
+    image/bg/op-screenshot.png
     image/icon/folder.png
     image/logo/money_bee.png
     image/logo/money_bee_small.png

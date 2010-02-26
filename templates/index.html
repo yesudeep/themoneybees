@@ -5,23 +5,62 @@
 {% block home_link %} {% endblock %}
 
 {% block tag_splash_content %}
-    <img id="money-bee" src="{{ MEDIA_URL }}image/logo/money_bee.png" />
-    <h1>the <span>MON&euro;&yen; bees</span></h1>
-{% endblock %}
-
-{% block tag_trunk_content %}
-<div class="article reversed">
-	<div class="content">
-	    <h2>Eliminate guesswork. Hit <strong>bullseye</strong> now.</h2>
-	    <p>Whatever your financial goals may be, our thorough analysis of <strong>your financial portfolio</strong> will provide you with to-the-point answers to achieve them.</p>
-	    <a href="#todo" class="awesome-button large">Get Started &raquo;</a>
-	</div>
-    <div class="aside">
-        <img id="image-folder" src="{{ MEDIA_URL }}image/icon/folder.png" />
+    <div class="panes">
+        <div class="content">
+            <h2>Eliminate guesswork. Hit <strong>bullseye</strong> now.</h2>
+            <p>Whatever your financial goals may be, our thorough analysis of <strong>your financial portfolio</strong> will provide you with to-the-point answers to achieve them.</p>
+            <a href="#todo" class="awesome-button large">Get Started &raquo;</a>
+            <a href="#todo" class="awesome-button large">Free Tour &raquo;</a>
+        </div>
+        <div class="aside">
+    <!--        <img id="money-bee" src="{{ MEDIA_URL }}image/logo/money_bee.png" />-->
+            <img id="money-bee" src="{{ MEDIA_URL }}image/bg/op-screenshot.png" />
+    <!--        <img id="image-folder" src="{{ MEDIA_URL }}image/icon/folder.png" />-->
+        </div>
+        <div>tab 2
+        </div>
+        <div>tab 3
+        </div>
+        <div>tab 4
+        </div>
+        <div>
+        tab 5
+        </div>
     </div>
- </div>
+    <div id="feature_list">
+        <ul class="tabs">
+            <li>
+                <h2><a href="#"> Feature 1 </a></h2>
+                <span>This Is Feature 1</span>
+            </li>
+            <li><h2><a href="#"> Feature 2 </a></h2>
+                <span>This Is Feature 2</span>
+            </li>
+            <li>
+                <h2><a href="#"> Feature 3</a></h2>
+                <span>This Is Feature 3</span>
+            </li>
+            <li>
+                <h2><a href="#"> Feature 4</a></h2>
+                <span>This Is Feature 4</span>
+            </li>
+            <li>
+                <h2><a href="#"> Feature 5</a></h2>
+                <span>This Is Feature 5</span>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block tag_trunk_content %} 
+<div class="article">
+<!--<img id="money-bee" src="{{ MEDIA_URL }}image/logo/money_bee.png" />-->
+<!--<h1>the <span>MON&euro;&yen; bees</span></h1>-->
+</div>
 
 {% endblock %}
+
+
 
 {% block tag_scripts %}
 <script type="text/javascript">
