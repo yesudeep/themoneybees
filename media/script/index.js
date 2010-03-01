@@ -1,4 +1,8 @@
-$(function() {
+jQuery(function() {
 	// setup ul.tabs to work as tabs for each div directly under div.panes
-	$("feature_list > ul.tabs").tabs("div.panes > div");
+	jQuery("div#feature-list ul.tabs").tabs("div.panes > div.pane-content",
+	                                        {
+	                                            event: 'click',
+	                                            effect: 'fade'
+	                                        });
 });

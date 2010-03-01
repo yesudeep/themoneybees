@@ -14,6 +14,7 @@ DEST_DIR = '../' + env['MEDIA_DEST_DIR'] + '/'
 SCRIPT_FILES = Split("""
     script/lib/chickoojs/src/jquery/jquery-1.3.2.js
     script/lib/chickoojs/src/jquery/jquery-1.4a1.min.js
+    script/lib/chickoojs/src/jquery/tools//1.1.2/jquery.tools.min.js
     script/base.js
     script/index.js
     script/blog.js
@@ -23,13 +24,13 @@ IMAGE_FILES = Split("""
     image/bg/button_overlay.png
     image/bg/textfield_normal.png
     image/bg/textfield_readonly.png
+    image/bg/temp.png
     image/bg/trunk.jpg
     image/bg/trunk-content.jpg
     image/bg/footer.jpg
     image/bg/splash.jpg
     image/bg/top-shadow.png
     image/bg/bottom-shadow.png
-    image/bg/selling_point_bg.jpg
     image/bg/op-screenshot.png
     image/icon/folder.png
     image/logo/money_bee.png

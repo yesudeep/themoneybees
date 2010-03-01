@@ -10,21 +10,19 @@
 
 html, body
     :height 100%
-    :background-color= !color_bg_body
     :font= "1em/1.5" !font_family_serif
     :color= !color_body_text
     :line-height 1.5
 
 a
     :text-decoration none
-    
+
 #header
-    :background= !color_bg_splash "no-repeat 50% 0"           
-    
+    //:background= !color_bg_splash "no-repeat 50% 0"           
     #nav
         :background= "transparent" !image_bg_bottom_shadow "repeat-x 0 0"
         :background-color= !color_bg_nav
-        :background-color= !color_bg_nav_rgba
+        //:background-color= !color_bg_nav_rgba
         :border-bottom= "2px solid" !color_border_bottom_nav
         :border-bottom= "2px solid" !color_border_bottom_nav_rgba
         
@@ -42,87 +40,64 @@ a
                         :color= !color_nav_links
                         :font-family= !font_stack_copperplate
                         :text-transform uppercase
-                        //:word-spacing 0.2em
+                        :word-spacing 0.2em
                         :text-shadow 1px 1px 1px #222
                         &:hover
                             :color= !color_nav_links_hover
 
-#splash
-    :min-height 355px
-    :background= !color_bg_trunk !image_bg_sec_nav "repeat scroll 0 0"
-    :border-bottom= "1px solid" !color_border_bottom_trunk
-    #splash-content
+#splash-content
+    :background= !image_bg_splash "repeat scroll 0 0"
+    .panes
+        .pane-content
+            +grid-container()
+            :min-height 350px
+            span
+                +grid(6,12)
+                :margin-top 100px
+                h2
+                    :font-size  1.5em
+                    :font-weight bold
+                    :font-family= !font_family_sans_serif_medium
+                    :text-align right
+                p
+                    :font-size 1em
+                    :color= !color_aside_body_text
+                    :font-family= !font_family_sans_serif
+                    :line-height 1.5em
+                    :margin-top 20px
+                    :text-align right
+                a
+                    :margin-top 45px
+                    :margin-left 15px
+                    :text-align right
+                    
+            .aside
+                +grid(6,12)
+                :text-align right
+                
+    #feature-list ul
         +grid-container()
-        .content
-            +grid(6,12)
-            :margin-top 120px
-            p, ul li
-                :font-size 0.8em
-                :color= !color_aside_body_text
-                :font-family= !font_family_sans_serif
-                :line-height 1.5em
-                :margin-top 20px
-                :text-align right
-                
-                
-            h2
-                :font-family= !font_family_sans_serif_medium
-                :font-size 1.5em
-                :font-weight bold
-                :text-align right
-                :color= !color_body_text
-            a
-                :margin-top 60px
-                :margin-right 20px
-                //+display-inline-block()
-        .aside
-            +grid(6,12)
-            :display block
-            :margin-top 30px
-        #feature_list ul
-            :text-align center
-            :margin-top 5px
-            li
-                +display-inline-block()
-                :margin-right 0.6em
-                :margin-top 30px
-                &:hover
-                    :border-top= "5px solid" !color_border_bottom_trunk
-#trunk-content
-    +grid-container()
-    //.article
-        :min-height 355px
-        :background= !color_bg_trunk !image_bg_sec_nav "repeat scroll 0 0"
-        :border-bottom= "1px solid" !color_border_bottom_trunk
-        .content
-            //+grid-container()
-            :width 500px
-            //:text-align left
-                        
-#trunk-ads
-    +grid-container()
-    :padding-top 1em
-    h2
-        +heading-level-2
-        :text-align center 
-           
-    #advertisement
+        :text-align center
+        :margin-top 5px
+        :min-height 52px
         li
+            +grid(1,5)
             +display-inline-block()
-            :width 30%
-            :padding 10px
-            :font-size 0.8em
-            //&:hover
-                //:background-color= !color_bg_footer
-            a
-                :color= !color_nav_links_hover
-            a:hover
-                :color #CD8500    
-                
+            //:margin-right 0.6em
+            //:margin-top 10px
+            h2
+                :font-size  1.2em
+                :font-weight bold
+                :font-family= !font_family_sans_serif_medium
+                a
+                    :color #fff
+            &:hover
+                :background= "transparent" !image_fl_active
+
 #footer
     :background-color= !color_bg_footer
     :color= !color_fg_footer
-    :border-top= "1px solid" !color_border_top_footer
+    :border-top= "2px solid" !color_border_top_footer
     #footer-content
         :background= !color_bg_footer !image_bg_footer "no-repeat 0 0"
         :min-height 150px
@@ -142,4 +117,5 @@ a
         a
             :color= !color_nav_links_hover
         a:hover
-            :text-decoration underline 
+            :text-decoration underline                             
+                
