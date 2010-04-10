@@ -25,6 +25,27 @@
 
 import configuration
 from google.appengine.ext import db
+from google.appengine.ext.db import polymodel
 from google.appengine.api import memcache
-from haggoo.db.models import RegularModel
+#from haggoo.db.models import RegularModel
+
+EMAIL_TYPE_CHOICES= (
+        'personal',
+        'office',
+)
+
+class profile(polymodel.PolyModel):
+    pass
+    
+class person(profile):
+    first_name = db.StringProperty(required=True)
+    middle_name = db.StringProperty(required=True)
+    last_name = db.StringProperty(required=True)
+    when_born = db.DateProperty()
+
+class EmailAddress(db.Model):
+    email = db.EmailProperty()
+    email_type = db.StringProperty(choices = EMAIL_TYPE_CHOICES)
+    profile = db.ReferenceProperty(profile, collection_name='emails')
+
 

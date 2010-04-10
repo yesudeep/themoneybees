@@ -33,6 +33,7 @@ from haggoo.template.jinja2 import render_generator
 from haggoo.sessions import SessionRequestHandler
 import logging
 import search
+import models
 
 # Set up logging.
 logging.basicConfig(level=logging.DEBUG)
@@ -80,11 +81,17 @@ class AnswersHandler(webapp.RequestHandler):
     def get(self):
         response = render_cached_template('answers.html')
         self.response.out.write(response)
+        
+class RegisterationHandler(webapp.RequestHandler):
+    def get(self):
+        response = render_cached_template('register.html')
+        self.response.out.write(response)
 
 # URL-to-request-handler mappings.
 urls = (
     # Pages.
     ('/', IndexHandler),
+    ('/register', RegisterationHandler),
     ('/blog/?', BlogHandler),
     ('/contact/?', ContactHandler),
     ('/answers/?', AnswersHandler),

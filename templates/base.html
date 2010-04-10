@@ -18,9 +18,9 @@
     <div id="nav-content">
         {% block tag_nav_content %}
         <ul class="links">
-            {% block home_link %}<li id="home-link"><a href="/"> <img src="{{ MEDIA_URL }}image/logo/money_bee_small.png" /></a></li>{% endblock %}
+            {% block home_link %}<!--li id="home-link"><a href="/"> <img src="{{ MEDIA_URL }}image/logo/money_bee_small.png" /></a></li-->{% endblock %}
             <li><a href="/">home</a></li>        
-            <li><a href="/blog">blog</a></li>
+            <li><a href="{{ TEXT_BLOG_URL }}">blog</a></li>
             <li><a href="/answers">answers</a></li>
             <li><a href="/offers">offers</a></li>
             <li><a href="/contact">contact</a></li>

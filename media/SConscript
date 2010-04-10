@@ -24,8 +24,12 @@ IMAGE_FILES = Split("""
     image/bg/button_overlay.png
     image/bg/textfield_normal.png
     image/bg/textfield_readonly.png
-    image/bg/temp.png
+    image/bg/bg.gif
+    image/bg/splash_hover.jpg
+    image/bg/footer_bg.png
     image/bg/trunk.jpg
+    image/bg/bg_header.jpg
+    image/bg/bkg_footer1.jpg
     image/bg/trunk-content.jpg
     image/bg/footer.jpg
     image/bg/splash.jpg

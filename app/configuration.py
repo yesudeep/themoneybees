@@ -55,6 +55,7 @@ MODE_PRODUCTION = 'production'
 SERVER_PORT = os.environ['SERVER_PORT']
 SERVER_NAME = os.environ['SERVER_NAME']
 SERVER_SOFTWARE = os.environ['SERVER_SOFTWARE']
+TEXT_BLOG_URL = 'http://blog.themoneybees.com'
 
 # Analytics identifiers.
 GOOGLE_ANALYTICS_ID = 'UA-12340948-1'
@@ -152,6 +153,7 @@ TEMPLATE_BUILTINS = {
     'JQUERY_URL': JQUERY_URL,
     'ANALYTICS_CODE': ANALYTICS_CODE,
     'TEXT_MEDIA_URL': TEXT_MEDIA_URL,
+    'TEXT_BLOG_URL' : TEXT_BLOG_URL, 
 }
 
 # Directories in which to search for templates.
